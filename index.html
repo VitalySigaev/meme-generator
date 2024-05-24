@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./assets/styles/style.css">
+    <title>Mem generator</title>
+</head>
+
+<body>
+    <div class="container">
+        <div class="settings-column">
+            <input type="file" id="imageInput" accept="image/*">
+            <div class="text-input">
+                <textarea id="textEntry" placeholder="Введите текст"></textarea>
+                <button id="addText">Добавить текст</button>
+            </div>
+            <div class="controls">
+                <label for="textColor">Цвет текста:</label>
+                <input type="color" id="textColor" value="#FFFFFF">
+                <label for="textSize">Размер текста:</label>
+                <input type="number" id="textSize" value="24" min="10" max="100">
+                <label for="fontFamily">Шрифт текста:</label>
+                <select id="fontFamily">
+                    <option value="Arial">Arial</option>
+                    <option value="Verdana">Verdana</option>
+                    <option value="Tahoma">Tahoma</option>
+                    <!-- Добавьте другие шрифты по вашему выбору -->
+                </select>
+                <label for="textStyle">Стиль текста:</label>
+                <select id="textStyle">
+                    <option value="normal">Обычный</option>
+                    <option value="italic">Курсив</option>
+                    <!-- Добавьте другие стили по вашему выбору -->
+                </select>
+            </div>
+
+        </div>
+        <div class="image-column">
+            <canvas id="canvas"></canvas>
+            <button id="saveMeme" class="btn-save">Сохранить мем</button>
+        </div>
+    </div>
+    <script src="./js/index.js" type="module"></script>
+</body>
+
+</html>
